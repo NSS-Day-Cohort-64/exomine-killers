@@ -1,3 +1,5 @@
+import { display } from "./Display.js"
+
 const mainContainer = document.querySelector("#container")
 
 const renderAllHTML = async () => {

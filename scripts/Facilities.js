@@ -10,7 +10,7 @@ export const GetFacilities = async () => {
         `<option value="${facility.id}">${facility.location}</option>`
     )
     .join("");
-  debugger;
+  
   const dropDown = `<select id="facility">
 <option value="0"> Choose a facility...</option>
 ${allFacilities}
