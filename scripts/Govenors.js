@@ -7,7 +7,9 @@ export const GetGovernors = async () => {
 
     const divStringArray = governors.map(
         (governor) => {
-            return `<option value='${governor.id} colonyId='${governor.colonyId}'>${governor.name}</option>`
+            if (governor.status === true) {
+                return `<option value='${governor.id} colonyId='${governor.colonyId}'>${governor.name}</option>`
+            }
         }
     )
     governorHTML += divStringArray.join("")
