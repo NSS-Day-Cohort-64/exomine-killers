@@ -11,3 +11,7 @@ renderAllHTML()
 document.addEventListener("facility-Inventory", (event) => {
     renderAllHTML()
 })
+
+document.addEventListener("mineralChosen", (event) => {
+    renderAllHTML()
+})
