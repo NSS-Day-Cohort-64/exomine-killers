@@ -19,6 +19,11 @@ const facilitiesHTML = await GetFacilities()
             <h2>Choose Facility:</h2>
         ${facilitiesHTML}
         </section>
+    
+        <section class="facility_inventory">
+            <h2>Choose Facility:</h2>
+        ${}
+        </section>
 
         
     `
