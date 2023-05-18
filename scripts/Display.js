@@ -21,7 +21,7 @@ const facilitiesHTML = await GetFacilities()
         </section>
     
         <section class="facility_inventory">
-            <h2>Choose Facility:</h2>
+            <h2>Facility Inventory:</h2>
         
         </section>
 
