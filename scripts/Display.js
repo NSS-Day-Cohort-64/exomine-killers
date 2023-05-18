@@ -1,11 +1,13 @@
-import { GetFacilities } from "./Facilities.js"
-import { GetGovernors } from "./Govenors.js"
+import { colonyInventory } from "./ColonyInventory.js";
+import { GetFacilities } from "./Facilities.js";
+import { GetGovernors } from "./Govenors.js";
 
 export const display = async () => {
-const governorsHTML = await GetGovernors()
-const facilitiesHTML = await GetFacilities()
+  const governorsHTML = await GetGovernors();
+  const facilitiesHTML = await GetFacilities();
+  const colonyHtml = await colonyInventory();
 
-    return `
+  return `
         <header>
         <h1>Exomine</h1>
         </header>
@@ -19,7 +21,10 @@ const facilitiesHTML = await GetFacilities()
             <h2>Choose Facility:</h2>
         ${facilitiesHTML}
         </section>
+        <section class="colony_minerals_chosen">
+        ${colonyHtml}
+        </section>
 
         
-    `
-}
+    `;
+};

@@ -1,4 +1,4 @@
-const transientState = {
+export const transientState = {
   governorId: 0,
   colonyId: 0,
   facilityId: 0,
@@ -13,6 +13,10 @@ export const setGovernorChoice = (chosenGovernor) => {
 export const setColonyChoice = (chosenColony) => {
   transientState.colonyId = chosenColony;
   console.log(transientState);
+  // need to set up a custom event to "say" something in the code happened
+  const customEvent = new CustomEvent("colony-choosen");
+  //dispatch it
+  document.dispatchEvent(customEvent);
 };
 
 export const setFacilityChoice = (chosenFacility) => {
