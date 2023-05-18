@@ -21,7 +21,7 @@ export const GetPurchasePreview = async () => {
                     facilities.map(
                         (facility) => {
                             if (facility.id === transientState.facilityId) {
-                                PurchasePreviewHTML = `<div>1 ton of ${mineral.name} from ${facility.name}</div>`
+                                PurchasePreviewHTML = `<div>1 ton of ${mineral.name} from ${facility.location}</div>`
                             }
                         }
                     )
