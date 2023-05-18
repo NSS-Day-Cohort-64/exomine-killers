@@ -17,3 +17,21 @@ export const GetGovernors = async () => {
 
     return governorHTML
 }
+
+const handleGovernorChoice = (changeEvent) => {
+    if (changeEvent.target.name === "governor") {
+        const chosenOption = changeEvent.target.value
+        setGovernorChoice(parseInt(chosenOption))
+    }
+}
+
+document.addEventListener("change", handleGovernorChoice)
+
+const handleColonyChoice = (changeEvent) => {
+    if (changeEvent.target.name === "governor") {
+        const chosenOption = changeEvent.target.colonyId
+        setColonyChoice(parseInt(chosenOption))
+    }
+}
+
+document.addEventListener("change", handleColonyChoice)
