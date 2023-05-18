@@ -1,7 +1,4 @@
 import { setColonyChoice, setGovernorChoice } from "./TransientState.js";
-
-import { setColonyChoice } from "./TransientState.js";
-import { setGovernorChoice } from "./TransientState.js";
 export const GetGovernors = async () => {
   const response = await fetch("http://localhost:8088/governors");
   const governors = await response.json();
