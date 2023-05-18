@@ -22,7 +22,7 @@ const facilitiesHTML = await GetFacilities()
     
         <section class="facility_inventory">
             <h2>Choose Facility:</h2>
-        ${}
+        
         </section>
 
         
