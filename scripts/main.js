@@ -1,4 +1,5 @@
 import { display } from "./Display.js";
+import { purchaseButtonTransfer } from "./Purchase.js";
 
 const mainContainer = document.querySelector("#container");
 

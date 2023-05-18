@@ -1,4 +1,4 @@
-import { colonyInventory } from "./ColonyInventory.js"
+
 import { transientState } from "./TransientState.js"
 
 export const purchaseButtonTransfer = async (clickEvent) => {
@@ -7,14 +7,16 @@ export const purchaseButtonTransfer = async (clickEvent) => {
     const responseColony = await fetch("http://localhost:8088/colonyInventory")
     const colonyInventories = await responseColony.json()
 
-    const customEvent = new CustomEvent("newMineralPurchased")
-    document.dispatchEvent(customEvent)
+
     // Ensure a radio button is checked, 
     if (transientState.mineralId !== 0) {
         //On purchase button click,
         if (clickEvent.target.id === "purchase") {
+            const customEvent = new CustomEvent("newMineralPurchased")
+            document.dispatchEvent(customEvent)
             //reduce the facilityInventory amount of the checked mineral by 1 and if there were none of that mineral, create it
             // Iterate through the inventory so as to get an actual object
+
             for (const facilityInventory of facilityInventories) {
                 if (facilityInventory.mineralId === transientState.mineralId) {
                     facilityInventory.amount--
@@ -44,6 +46,7 @@ export const purchaseButtonTransfer = async (clickEvent) => {
                     }
                 }
         }
+
     }
 
 
