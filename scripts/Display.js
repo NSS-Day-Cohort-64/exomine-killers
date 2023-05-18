@@ -1,9 +1,12 @@
+import { GetPurchasePreview, PurchaseButton } from "./Cart.js"
 import { GetFacilities } from "./Facilities.js"
 import { GetGovernors } from "./Govenors.js"
 
 export const display = async () => {
 const governorsHTML = await GetGovernors()
 const facilitiesHTML = await GetFacilities()
+const purchaseButton = PurchaseButton()
+const purchasePreview = await GetPurchasePreview()
 
     return `
         <header>
@@ -19,6 +22,10 @@ const facilitiesHTML = await GetFacilities()
             <h2>Choose Facility:</h2>
         ${facilitiesHTML}
         </section>
+
+        <section class="purchase_button">
+        ${purchasePreview}
+        ${purchaseButton}
 
         
     `
