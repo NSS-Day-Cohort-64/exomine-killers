@@ -24,3 +24,7 @@ document.addEventListener("mineralChosen", (event) => {
     renderAllHTML()
 })
 
+document.addEventListener("newMineralPurchased", (event) => {
+  renderAllHTML()
+})
+

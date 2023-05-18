@@ -3,7 +3,7 @@ import { GetPurchasePreview, PurchaseButton } from "./Cart.js"
 import { GetFacilities } from "./Facilities.js"
 import { getFacilityInventory } from "./FacilitiesInventory.js"
 import { GetGovernors } from "./Govenors.js"
-import { colonyInventory } from "./ColonyInventory.js";
+import { colonyInventory } from "./ColonyInventory.js"
 
 export const display = async () => {
 
