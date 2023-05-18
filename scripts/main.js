@@ -7,3 +7,7 @@ const renderAllHTML = async () => {
 }
 
 renderAllHTML()
+
+document.addEventListener("facility-Inventory", (event) => {
+    renderAllHTML()
+})

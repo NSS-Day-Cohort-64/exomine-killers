@@ -1,4 +1,4 @@
-const transientState = {
+export const transientState = {
   governorId: 0,
   colonyId: 0,
   facilityId: 0,
@@ -24,3 +24,5 @@ export const setMineralChoice = (chosenMineral) => {
   transientState.mineralId = chosenMineral;
   console.log(transientState);
 };
+
+
