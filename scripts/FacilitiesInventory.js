@@ -1,4 +1,5 @@
-import { transientState } from "./TransientState.js"
+import { GetPurchasePreview } from "./Cart.js"
+import { setMineralChoice, transientState } from "./TransientState.js"
 
 export const getFacilityInventory = async (chosenFacility) => {
     const response = await fetch("http://localhost:8088/facilityInventory?_expand=mineral")
@@ -10,7 +11,9 @@ export const getFacilityInventory = async (chosenFacility) => {
     if (transientState.facilityId !== 0) {
         for (const facilityInventory of facilitiesInventories) {
             if (facilityInventory.facilityId === correctFacility) {
-            facilityInventoryHTML += `<input type="radio" name="facilityInventory" facilityId ="${facilityInventory.facilityId}"  value="${facilityInventory.id}"/>${facilityInventory.amount} tons of ${facilityInventory.mineral.name}<br>`
+            const isChecked =
+            facilityInventory.mineral.id === transientState.mineralId ? "checked" : "";
+            facilityInventoryHTML += `<input type="radio" name="facilityInventory" facilityId = "${facilityInventory.facilityId}" data-mineralId="${facilityInventory.mineralId}" value="${facilityInventory.id}"  ${isChecked}/>${facilityInventory.amount} tons of ${facilityInventory.mineral.name}<br>`
         }
     }
 }
@@ -28,4 +31,22 @@ const handleFacilityInventoryChoice = (changeEvent) => {
     }
 }
 
+const HandleMineralChoice = (changeEvent) => {
+    if (changeEvent.target.name === "facilityInventory") {
+        const chosenMineral = changeEvent.target.dataset.mineralid;
+        setMineralChoice(parseInt(chosenMineral));
+    }
+}
+
+
+// const handleColonyChoice = (changeEvent) => {
+//     if (changeEvent.target.name === "governor") {
+//         const i = parseInt(changeEvent.target.value)
+//         const chosenColony = changeEvent.target[i].dataset.colonyid
+//         setColonyChoice(parseInt(chosenColony))
+//     }
+// }
+
 document.addEventListener("change", handleFacilityInventoryChoice)
+document.addEventListener("change", GetPurchasePreview)
+document.addEventListener("change", HandleMineralChoice)
