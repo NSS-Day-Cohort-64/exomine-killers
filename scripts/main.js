@@ -15,17 +15,14 @@ document.addEventListener("colony-choosen", (event) => {
   renderAllHTML();
 });
 
-renderAllHTML()
-
 document.addEventListener("facility-Inventory", (event) => {
-    renderAllHTML()
-})
+  renderAllHTML();
+});
 
 document.addEventListener("mineralChosen", (event) => {
-    renderAllHTML()
-})
+  renderAllHTML();
+});
 
 document.addEventListener("newMineralPurchased", (event) => {
-  renderAllHTML()
-})
-
+  renderAllHTML();
+});

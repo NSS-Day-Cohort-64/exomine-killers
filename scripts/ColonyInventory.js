@@ -72,10 +72,9 @@ export const colonyInventory = async () => {
   let colonyHtml = "";
   // if the colony minerals array(that we pushed an object to) length is greater than 0
   if (colonyMinerals.length > 0) {
-    // colonyHtml += the colonyName
-    colonyHtml += `<h2>${colonyName}</h2>`;
+    // colonyHtml += the colonyName;
     //colonyHtml += the section with the id of colonyMinerals
-    colonyHtml += `<section id="colonyMinerals">`;
+    colonyHtml += `<section id="colonyMinerals"> <h2>${colonyName}</h2>`;
     // then we need to loop through our colonyMinerals(the array that contains our object)
     for (const mineral of colonyMinerals) {
       // then we add to the colonyHtml the mineral.amount tons of mineral.name
