@@ -72,7 +72,6 @@ export const purchaseButtonTransfer = async (clickEvent) => {
         }
     }
   }
-};
 
 document.addEventListener("click", (clickEvent) => {
   if (transientState.mineralId !== 0) {
