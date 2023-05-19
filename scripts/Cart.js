@@ -19,8 +19,7 @@ export const GetPurchasePreview = async () => {
       if (mineral.id === transientState.mineralId) {
         facilities.map((facility) => {
           if (facility.id === transientState.facilityId) {
-            PurchasePreviewHTML = `<div class="purchase-button"> 1 ton of ${mineral.name} 
-            from ${facility.location}</div>`;
+            PurchasePreviewHTML = `<div>1 ton of ${mineral.name} from ${facility.location}</div>`;
           }
         });
       }

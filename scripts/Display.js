@@ -3,6 +3,7 @@ import { GetFacilities } from "./Facilities.js";
 import { getFacilityInventory } from "./FacilitiesInventory.js";
 import { GetGovernors } from "./Govenors.js";
 import { colonyInventory } from "./ColonyInventory.js";
+import { getFacilityInventoryTitle } from "./FacilityInventoryTitle.js";
 
 export const display = async () => {
   const governorsHTML = await GetGovernors();
@@ -11,6 +12,7 @@ export const display = async () => {
   const purchaseButtonHTML = PurchaseButton();
   const purchasePreviewHTML = await GetPurchasePreview();
   const colonyHtml = await colonyInventory();
+  const facilityInventoryTitleHTML = await getFacilityInventoryTitle();
 
   return `
         <header>
@@ -35,16 +37,14 @@ export const display = async () => {
         </section>
        <section class="bottom">
         <section id="facility_inventory">
-            <h2>Facility inventory:</h2>
+            ${facilityInventoryTitleHTML}
         ${facilityInventoryHTML}
         </section>
 
         <section id="purchase">
         <h3 class="space-cart">Space Cart<h3>
         ${purchasePreviewHTML}
-        ${purchaseButtonHTML} 
-        </section>   
-        </section>
-
+        ${purchaseButtonHTML}   
+        </section> 
     `;
 };
