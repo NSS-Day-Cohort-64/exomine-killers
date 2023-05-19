@@ -11,15 +11,15 @@ export const getFacilityInventory = async (chosenFacility) => {
     if (transientState.facilityId !== 0) {
         for (const facilityInventory of facilitiesInventories) {
             if (facilityInventory.facilityId === correctFacility) {
-            const isChecked =
-            facilityInventory.mineral.id === transientState.mineralId ? "checked" : "";
-            facilityInventoryHTML += `<input type="radio" name="facilityInventory" facilityId = "${facilityInventory.facilityId}" data-mineralId="${facilityInventory.mineralId}" value="${facilityInventory.id}"  ${isChecked}/>${facilityInventory.amount} tons of ${facilityInventory.mineral.name}<br>`
+                const isChecked =
+                    facilityInventory.mineral.id === transientState.mineralId ? "checked" : "";
+                facilityInventoryHTML += `<input type="radio" name="facilityInventory" facilityId = "${facilityInventory.facilityId}" data-mineralId="${facilityInventory.mineralId}" value="${facilityInventory.id}"  ${isChecked}/>${facilityInventory.amount} tons of ${facilityInventory.mineral.name}<br>`
+            }
         }
     }
-}
-return facilityInventoryHTML
+    return facilityInventoryHTML
 
-}    
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const handleFacilityInventoryChoice = (changeEvent) => {
@@ -27,6 +27,7 @@ const handleFacilityInventoryChoice = (changeEvent) => {
         const chosenFacility = parseInt(changeEvent.target.value)
         const facilityInventoryCustomEvent = new CustomEvent("facility-Inventory")
         document.dispatchEvent(facilityInventoryCustomEvent)
+        transientState.mineralId = 0
         return getFacilityInventory(chosenFacility)
     }
 }
@@ -37,15 +38,6 @@ const HandleMineralChoice = (changeEvent) => {
         setMineralChoice(parseInt(chosenMineral));
     }
 }
-
-
-// const handleColonyChoice = (changeEvent) => {
-//     if (changeEvent.target.name === "governor") {
-//         const i = parseInt(changeEvent.target.value)
-//         const chosenColony = changeEvent.target[i].dataset.colonyid
-//         setColonyChoice(parseInt(chosenColony))
-//     }
-// }
 
 document.addEventListener("change", handleFacilityInventoryChoice)
 document.addEventListener("change", GetPurchasePreview)

@@ -32,8 +32,3 @@ export const GetPurchasePreview = async () => {
 PurchasePreview()
 return PurchasePreviewHTML
 }
-
-
-
-
-
