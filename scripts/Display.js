@@ -41,7 +41,6 @@ export const display = async () => {
 
         <section id="purchase">
         ${purchasePreviewHTML}
-        ${purchaseButtonHTML}
-        
+        ${purchaseButtonHTML}    
     `;
 };

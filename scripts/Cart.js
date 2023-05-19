@@ -1,4 +1,4 @@
-import { transientState } from "./TransientState.js" 
+import { transientState } from "./TransientState.js"
 
 export const PurchaseButton = () => {
     return `<div><button id='purchase' class="button">Purchase Mineral</button></div>`
@@ -15,8 +15,8 @@ export const GetPurchasePreview = async () => {
     const PurchasePreview = () => {
         // 1 ton of iron from Ganymede `<div>1 ton of ${mineral.name} from ${facility.name}</div>`
         // Listen for a custom event inside of HandleMineralChoice
-                minerals.map(
-                (mineral) => {
+        minerals.map(
+            (mineral) => {
                 if (mineral.id === transientState.mineralId) {
                     facilities.map(
                         (facility) => {
@@ -26,12 +26,14 @@ export const GetPurchasePreview = async () => {
                         }
                     )
                 }
-        }) 
+            })
         return PurchasePreviewHTML
-        }
-PurchasePreview()
-return PurchasePreviewHTML
+    }
+    PurchasePreview()
+    return PurchasePreviewHTML
 }
+
+
 
 
 

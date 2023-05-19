@@ -1,5 +1,4 @@
 import { display } from "./Display.js";
-
 const mainContainer = document.querySelector("#container");
 
 const renderAllHTML = async () => {
@@ -19,5 +18,9 @@ document.addEventListener("facility-Inventory", (event) => {
 });
 
 document.addEventListener("mineralChosen", (event) => {
+  renderAllHTML();
+});
+
+document.addEventListener("newMineralPurchased", (event) => {
   renderAllHTML();
 });
