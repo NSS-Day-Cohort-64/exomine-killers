@@ -74,9 +74,13 @@ export const purchaseButtonTransfer = async (clickEvent) => {
 };
 
 document.addEventListener("click", (clickEvent) => {
-  if (transientState.mineralId !== 0) {
-    if (clickEvent.target.id === "purchase") {
-      purchaseButtonTransfer();
+    if (transientState.mineralId !== 0) {
+        if (transientState.governorId !== 0) {
+            if (clickEvent.target.id === "purchase") {
+                purchaseButtonTransfer()
+            }
+        }
+
     }
   }
 });
