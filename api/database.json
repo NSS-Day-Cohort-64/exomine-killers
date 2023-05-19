@@ -348,7 +348,7 @@
     },
     {
       "id": 24,
-      "colonyId": 7,
+      "colonyId": 1,
       "mineralId": 4,
       "amount": 56
     },
@@ -357,6 +357,12 @@
       "colonyId": 9,
       "mineralId": 1,
       "amount": 30
+    },
+    {
+      "colonyId": 4,
+      "mineralId": 4,
+      "amount": 1,
+      "id": 26
     }
   ],
   "facilityInventory": [
