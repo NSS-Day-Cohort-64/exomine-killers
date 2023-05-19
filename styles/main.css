@@ -1,0 +1,10 @@
+body {
+    background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWJiZWEwMWJhMTFkN2E2MjRhZWM1MzdkYWMxZTgzNmNiYmViYjU4NiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/GC7C2Fi902BDG/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2 {
+   color: white;
+   text-decoration: blue;
+}
