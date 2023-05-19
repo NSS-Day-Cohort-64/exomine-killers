@@ -24,7 +24,7 @@ export const purchaseButtonTransfer = async (clickEvent) => {
 
     if (matchingFacilityInventories.length > 0) {
         const facilityInventory = matchingFacilityInventories[0];
-        if ( facilityInventory !== 0) {
+        if ( facilityInventory.amount !== 0) {
             facilityInventory.amount--; // Walked through the debugger and this does happen but we need to post it so it becomes real
     
             const facilityInventoryUpdateOptions = {
