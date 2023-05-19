@@ -41,6 +41,7 @@ return `
 
         <section id="purchase">
         ${purchasePreviewHTML}
-        ${purchaseButtonHTML}    
+        ${purchaseButtonHTML}   
+        </section> 
     `;
 };
