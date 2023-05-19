@@ -3,9 +3,9 @@ import { transientState } from "./TransientState.js"
 
 export const purchaseButtonTransfer = async (clickEvent) => {
     // Ensure a radio button is checked, 
-    if (transientState.mineralId !== 0) {
+
         //On purchase button click,
-        if (clickEvent.target.id === "purchase") {
+         
             const customEvent = new CustomEvent("newMineralPurchased")
             document.dispatchEvent(customEvent)
     const responseFacility = await fetch("http://localhost:8088/facilityInventory")
@@ -46,9 +46,9 @@ export const purchaseButtonTransfer = async (clickEvent) => {
                     
                     }
                 }
-        }
 
-    }
+
+    
 
 
 // const postOrder = async () => {
@@ -62,4 +62,10 @@ export const purchaseButtonTransfer = async (clickEvent) => {
 //     await fetch("http://localhost:8088/colonyInventory", postOptions)
 // }
 
-document.addEventListener("click", purchaseButtonTransfer)
+document.addEventListener("click", (clickEvent) => {
+    if (transientState.mineralId !== 0) {
+        if (clickEvent.target.id === "purchase") {
+            purchaseButtonTransfer
+        }
+    }
+})
