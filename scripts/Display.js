@@ -4,6 +4,7 @@ import { GetFacilities } from "./Facilities.js"
 import { getFacilityInventory } from "./FacilitiesInventory.js"
 import { GetGovernors } from "./Govenors.js"
 import { colonyInventory } from "./ColonyInventory.js"
+import { getFacilityInventoryTitle } from "./FacilityInventoryTitle.js"
 
 export const display = async () => {
 
@@ -13,6 +14,7 @@ export const display = async () => {
     const purchaseButtonHTML = PurchaseButton()
     const purchasePreviewHTML = await GetPurchasePreview()
     const colonyHtml = await colonyInventory();
+    const facilityInventoryTitleHTML = await getFacilityInventoryTitle()
 
 
 return `
@@ -35,7 +37,7 @@ return `
         </section>
 
         <section id="facility_inventory">
-            <h2>Facility Inventory:</h2>
+            ${facilityInventoryTitleHTML}
         ${facilityInventoryHTML}
         </section>
 
