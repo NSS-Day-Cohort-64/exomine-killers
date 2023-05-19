@@ -11,15 +11,15 @@ export const getFacilityInventory = async (chosenFacility) => {
     if (transientState.facilityId !== 0) {
         for (const facilityInventory of facilitiesInventories) {
             if (facilityInventory.facilityId === correctFacility) {
-            const isChecked =
-            facilityInventory.mineral.id === transientState.mineralId ? "checked" : "";
-            facilityInventoryHTML += `<input type="radio" name="facilityInventory" facilityId = "${facilityInventory.facilityId}" data-mineralId="${facilityInventory.mineralId}" value="${facilityInventory.id}"  ${isChecked}/>${facilityInventory.amount} tons of ${facilityInventory.mineral.name}<br>`
+                const isChecked =
+                    facilityInventory.mineral.id === transientState.mineralId ? "checked" : "";
+                facilityInventoryHTML += `<input type="radio" name="facilityInventory" facilityId = "${facilityInventory.facilityId}" data-mineralId="${facilityInventory.mineralId}" value="${facilityInventory.id}"  ${isChecked}/>${facilityInventory.amount} tons of ${facilityInventory.mineral.name}<br>`
+            }
         }
     }
-}
-return facilityInventoryHTML
+    return facilityInventoryHTML
 
-}    
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const handleFacilityInventoryChoice = (changeEvent) => {
