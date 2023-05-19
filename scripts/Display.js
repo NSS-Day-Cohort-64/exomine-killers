@@ -33,14 +33,18 @@ export const display = async () => {
         ${colonyHtml}
         </section>
         </section>
-
+       <section class="bottom">
         <section id="facility_inventory">
-            <h2>Facility Inventory:</h2>
+            <h2>Facility inventory:</h2>
         ${facilityInventoryHTML}
         </section>
 
         <section id="purchase">
+        <h3 class="space-cart">Space Cart<h3>
         ${purchasePreviewHTML}
-        ${purchaseButtonHTML}    
+        ${purchaseButtonHTML} 
+        </section>   
+        </section>
+
     `;
 };
