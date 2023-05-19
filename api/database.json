@@ -429,6 +429,18 @@
       "mineralId": 7,
       "amount": 2,
       "id": 37
+    },
+    {
+      "colonyId": 8,
+      "mineralId": 8,
+      "amount": 35,
+      "id": 38
+    },
+    {
+      "colonyId": 8,
+      "mineralId": 6,
+      "amount": 18,
+      "id": 39
     }
   ],
   "facilityInventory": [
@@ -502,7 +514,7 @@
       "id": 12,
       "facilityId": 7,
       "mineralId": 6,
-      "amount": 61
+      "amount": 43
     },
     {
       "id": 13,
@@ -568,7 +580,7 @@
       "id": 23,
       "facilityId": 7,
       "mineralId": 8,
-      "amount": 64
+      "amount": 29
     },
     {
       "id": 24,
