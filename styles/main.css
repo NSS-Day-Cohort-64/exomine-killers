@@ -1,0 +1,17 @@
+.choose_facility {
+}
+
+#colonyMinerals {
+}
+.choose_govener {
+  width: fit-content;
+}
+
+.choosen {
+  display: flex;
+  justify-content: space-evenly;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+}
