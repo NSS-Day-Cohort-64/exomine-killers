@@ -260,7 +260,7 @@
       "id": 9,
       "colonyId": 1,
       "mineralId": 2,
-      "amount": 74
+      "amount": 93
     },
     {
       "id": 10,
@@ -359,6 +359,7 @@
       "amount": 31
     },
     {
+
       "colonyId": 1,
       "mineralId": 10,
       "amount": 7,
@@ -479,6 +480,7 @@
       "facilityId": 11,
       "mineralId": 2,
       "amount": 18
+
     },
     {
       "id": 12,
@@ -502,7 +504,7 @@
       "id": 15,
       "facilityId": 3,
       "mineralId": 4,
-      "amount": 28
+      "amount": 12
     },
     {
       "id": 16,

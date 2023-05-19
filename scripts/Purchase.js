@@ -20,55 +20,56 @@ export const purchaseButtonTransfer = async (clickEvent) => {
     .filter((inventory) => inventory.facilityId === transientState.facilityId)
     .filter((inventory) => inventory.mineralId === transientState.mineralId);
 
-  if (matchingFacilityInventories.length > 0) {
-    const facilityInventory = matchingFacilityInventories[0];
-    facilityInventory.amount--; // Walked through the debugger and this does happen but we need to post it so it becomes real
-
-    const facilityInventoryUpdateOptions = {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(facilityInventory),
-    };
-    await fetch(
-      `http://localhost:8088/facilityInventory/${facilityInventory.id}`,
-      facilityInventoryUpdateOptions
-    );
-
-    const matchingColonyInventories = colonyInventories
-      .filter((inventory) => inventory.colonyId === transientState.colonyId)
-      .filter((inventory) => inventory.mineralId === transientState.mineralId);
-    if (matchingColonyInventories.length > 0) {
-      const colonyInventory = matchingColonyInventories[0];
-      colonyInventory.amount++;
-
-      const colonyInventoryUpdateOptions = {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(colonyInventory),
-      };
-      await fetch(
-        `http://localhost:8088/colonyInventory/${colonyInventory.id}`,
-        colonyInventoryUpdateOptions
-      );
-    } else {
-      const colonyInventoryObject = {
-        colonyId: transientState.colonyId,
-        mineralId: transientState.mineralId,
-        amount: 1,
-      };
-      //POST the object to colonyInventory
-      const postOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(colonyInventoryObject),
-      };
-      await fetch("http://localhost:8088/colonyInventory", postOptions);
+    if (matchingFacilityInventories.length > 0) {
+        const facilityInventory = matchingFacilityInventories[0];
+        if ( facilityInventory.amount !== 0) {
+            facilityInventory.amount--; // Walked through the debugger and this does happen but we need to post it so it becomes real
+    
+            const facilityInventoryUpdateOptions = {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify(facilityInventory)
+              };
+              await fetch(`http://localhost:8088/facilityInventory/${facilityInventory.id}`, facilityInventoryUpdateOptions);
+            
+    
+            const matchingColonyInventories = colonyInventories.filter(
+                (inventory) => inventory.colonyId === transientState.colonyId
+            ).filter(
+                (inventory) => inventory.mineralId === transientState.mineralId
+            )
+            if (matchingColonyInventories.length > 0) {
+                const colonyInventory = matchingColonyInventories[0];
+                colonyInventory.amount++;
+    
+                const colonyInventoryUpdateOptions = {
+                    method: "PUT",
+                    headers: {
+                      "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(colonyInventory)
+                  };
+                  await fetch(`http://localhost:8088/colonyInventory/${colonyInventory.id}`, colonyInventoryUpdateOptions);
+    
+            } else {
+                const colonyInventoryObject = {
+                    colonyId: transientState.colonyId,
+                    mineralId: transientState.mineralId,
+                    amount: 1,
+                };
+                //POST the object to colonyInventory
+                const postOptions = {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(colonyInventoryObject)
+                }
+                await fetch("http://localhost:8088/colonyInventory", postOptions)
+        }
+        }
     }
   }
 };
