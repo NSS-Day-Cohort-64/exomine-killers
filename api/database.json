@@ -308,7 +308,7 @@
       "id": 17,
       "colonyId": 1,
       "mineralId": 7,
-      "amount": 86
+      "amount": 91
     },
     {
       "id": 18,
@@ -423,6 +423,12 @@
       "mineralId": 9,
       "amount": 1,
       "id": 36
+    },
+    {
+      "colonyId": 1,
+      "mineralId": 6,
+      "amount": 1,
+      "id": 37
     }
   ],
   "facilityInventory": [
@@ -448,7 +454,7 @@
       "id": 4,
       "facilityId": 2,
       "mineralId": 6,
-      "amount": 42
+      "amount": 41
     },
     {
       "id": 5,
@@ -460,7 +466,7 @@
       "id": 6,
       "facilityId": 3,
       "mineralId": 7,
-      "amount": 69
+      "amount": 64
     },
     {
       "id": 7,
