@@ -4,9 +4,6 @@ export const purchaseButtonTransfer = async (clickEvent) => {
   // Ensure a radio button is checked,
 
   //On purchase button click,
-
-  const customEvent = new CustomEvent("newMineralPurchased");
-  document.dispatchEvent(customEvent);
   const responseFacility = await fetch(
     "http://localhost:8088/facilityInventory"
   );
@@ -71,6 +68,8 @@ export const purchaseButtonTransfer = async (clickEvent) => {
         }
         }
     }
+    const customEvent = new CustomEvent("newMineralPurchased");
+    document.dispatchEvent(customEvent);
   }
 
 document.addEventListener("click", (clickEvent) => {
