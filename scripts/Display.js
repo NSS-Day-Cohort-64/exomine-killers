@@ -3,9 +3,10 @@ import { GetPurchasePreview, PurchaseButton } from "./Cart.js"
 import { GetFacilities } from "./Facilities.js"
 import { getFacilityInventory } from "./FacilitiesInventory.js"
 import { GetGovernors } from "./Govenors.js"
-import { colonyInventory } from "./ColonyInventory.js";
+import { colonyInventory } from "./ColonyInventory.js"
 
 export const display = async () => {
+
     const governorsHTML = await GetGovernors()
     const facilitiesHTML = await GetFacilities()
     const facilityInventoryHTML = await getFacilityInventory()
@@ -14,7 +15,7 @@ export const display = async () => {
     const colonyHtml = await colonyInventory();
 
 
-  return `
+return `
         <header>
         <h1>Exomine</h1>
         </header>
@@ -40,7 +41,6 @@ export const display = async () => {
 
         <section id="purchase">
         ${purchasePreviewHTML}
-        ${purchaseButtonHTML}
-        
+        ${purchaseButtonHTML}    
     `;
 };
