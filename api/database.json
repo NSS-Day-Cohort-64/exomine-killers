@@ -9,7 +9,7 @@
     {
       "id": 2,
       "name": "Emperor Palpatine",
-      "status": true,
+      "status": false,
       "colonyId": 2
     },
     {
@@ -85,7 +85,7 @@
     {
       "id": 5,
       "location": "Endor Shield Facility",
-      "status": true
+      "status": false
     },
     {
       "id": 6,
@@ -260,7 +260,7 @@
       "id": 9,
       "colonyId": 1,
       "mineralId": 2,
-      "amount": 74
+      "amount": 93
     },
     {
       "id": 10,
@@ -302,7 +302,7 @@
       "id": 16,
       "colonyId": 4,
       "mineralId": 1,
-      "amount": 45
+      "amount": 53
     },
     {
       "id": 17,
@@ -413,6 +413,7 @@
       "id": 34
     },
     {
+<<<<<<< HEAD
       "colonyId": 2,
       "mineralId": 10,
       "amount": 4,
@@ -429,6 +430,36 @@
       "mineralId": 6,
       "amount": 1,
       "id": 37
+=======
+      "colonyId": 4,
+      "mineralId": 8,
+      "amount": 2,
+      "id": 35
+    },
+    {
+      "colonyId": 4,
+      "mineralId": 9,
+      "amount": 15,
+      "id": 36
+    },
+    {
+      "colonyId": 4,
+      "mineralId": 7,
+      "amount": 2,
+      "id": 37
+    },
+    {
+      "colonyId": 8,
+      "mineralId": 8,
+      "amount": 35,
+      "id": 38
+    },
+    {
+      "colonyId": 8,
+      "mineralId": 6,
+      "amount": 18,
+      "id": 39
+>>>>>>> main
     }
   ],
   "facilityInventory": [
@@ -442,7 +473,11 @@
       "id": 2,
       "facilityId": 5,
       "mineralId": 9,
+<<<<<<< HEAD
       "amount": 14
+=======
+      "amount": 0
+>>>>>>> main
     },
     {
       "id": 3,
@@ -472,7 +507,7 @@
       "id": 7,
       "facilityId": 10,
       "mineralId": 1,
-      "amount": 24
+      "amount": 16
     },
     {
       "id": 8,
@@ -484,7 +519,7 @@
       "id": 9,
       "facilityId": 6,
       "mineralId": 8,
-      "amount": 49
+      "amount": 47
     },
     {
       "id": 10,
@@ -502,7 +537,11 @@
       "id": 12,
       "facilityId": 7,
       "mineralId": 6,
+<<<<<<< HEAD
       "amount": 60
+=======
+      "amount": 43
+>>>>>>> main
     },
     {
       "id": 13,
@@ -520,13 +559,13 @@
       "id": 15,
       "facilityId": 3,
       "mineralId": 4,
-      "amount": 28
+      "amount": 12
     },
     {
       "id": 16,
       "facilityId": 10,
       "mineralId": 7,
-      "amount": 68
+      "amount": 66
     },
     {
       "id": 17,
@@ -568,7 +607,11 @@
       "id": 23,
       "facilityId": 7,
       "mineralId": 8,
+<<<<<<< HEAD
       "amount": 63
+=======
+      "amount": 29
+>>>>>>> main
     },
     {
       "id": 24,
