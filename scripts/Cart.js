@@ -1,7 +1,12 @@
 import { transientState } from "./TransientState.js";
 
 export const PurchaseButton = () => {
-  return `<div><button class='purchase-btn' id='purchase'>Purchase Mineral</button></div>`;
+  let buttonClass = "purchase-btn";
+  if (!transientState.mineralId || !transientState.facilityId) {
+    buttonClass += " hidden-btn";
+  }
+  return `<div><button class='${buttonClass}' id='purchase'>Purchase Mineral</button></div>`;
+  //return `<div><button class="hiddin-btn"class='purchase-btn' id='purchase'>Purchase Mineral</button></div>`;
 };
 
 export const GetPurchasePreview = async () => {
