@@ -1,4 +1,5 @@
 import { display } from "./Display.js";
+import { purchaseButtonTransfer } from "./Purchase.js";
 
 const mainContainer = document.querySelector("#container");
 
@@ -22,5 +23,9 @@ document.addEventListener("facility-Inventory", (event) => {
 
 document.addEventListener("mineralChosen", (event) => {
     renderAllHTML()
+})
+
+document.addEventListener("newMineralPurchased", (event) => {
+  renderAllHTML()
 })
 

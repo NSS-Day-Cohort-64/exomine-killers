@@ -23,11 +23,11 @@ return facilityInventoryHTML
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const handleFacilityInventoryChoice = (changeEvent) => {
-    
     if (changeEvent.target.name === "facility") {
-        const chosenFacility = changeEvent.target.value
+        const chosenFacility = parseInt(changeEvent.target.value)
         const facilityInventoryCustomEvent = new CustomEvent("facility-Inventory")
         document.dispatchEvent(facilityInventoryCustomEvent)
+        transientState.mineralId = 0
         return getFacilityInventory(chosenFacility)
     }
 }
@@ -38,15 +38,6 @@ const HandleMineralChoice = (changeEvent) => {
         setMineralChoice(parseInt(chosenMineral));
     }
 }
-
-
-// const handleColonyChoice = (changeEvent) => {
-//     if (changeEvent.target.name === "governor") {
-//         const i = parseInt(changeEvent.target.value)
-//         const chosenColony = changeEvent.target[i].dataset.colonyid
-//         setColonyChoice(parseInt(chosenColony))
-//     }
-// }
 
 document.addEventListener("change", handleFacilityInventoryChoice)
 document.addEventListener("change", GetPurchasePreview)
