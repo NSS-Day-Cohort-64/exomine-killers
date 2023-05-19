@@ -44,9 +44,10 @@ h2 {
   float: left;
   border: 3px solid #ffe81f;
   padding-top: 15px;
-  padding-right: 80px;
+  padding-right: 60px;
   padding-bottom: 15px;
-  padding-left: 80px;
+  padding-left: 60px;
+  margin-right: 25px;
 }
 .purchase-button {
   width: 120px;
@@ -62,10 +63,9 @@ h2 {
   border: 1px solid #ffe81f;
   border-radius: 25px;
   background-color: black;
-
-  padding-left: 5px;
-  padding-right: 5px;
   color: #ffe81f;
   font-family: "Star Wars", sans-serif;
   margin-top: 5px;
+  width: fit-content;
+  font-size: 9px;
 }
