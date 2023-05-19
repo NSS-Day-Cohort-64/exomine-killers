@@ -1,26 +1,24 @@
-
-import { transientState } from "./TransientState.js"
+import { transientState } from "./TransientState.js";
 
 export const purchaseButtonTransfer = async (clickEvent) => {
-    // Ensure a radio button is checked, 
+  // Ensure a radio button is checked,
 
-    //On purchase button click,
+  //On purchase button click,
 
-    const customEvent = new CustomEvent("newMineralPurchased")
-    document.dispatchEvent(customEvent)
-    const responseFacility = await fetch("http://localhost:8088/facilityInventory")
-    const facilityInventories = await responseFacility.json()
-    const responseColony = await fetch("http://localhost:8088/colonyInventory")
-    const colonyInventories = await responseColony.json()
+  const customEvent = new CustomEvent("newMineralPurchased");
+  document.dispatchEvent(customEvent);
+  const responseFacility = await fetch(
+    "http://localhost:8088/facilityInventory"
+  );
+  const facilityInventories = await responseFacility.json();
+  const responseColony = await fetch("http://localhost:8088/colonyInventory");
+  const colonyInventories = await responseColony.json();
 
-
-    //reduce the facilityInventory amount of the checked mineral by 1 and if there were none of that mineral, create it
-    // Iterate through the inventory so as to get an actual object
-    const matchingFacilityInventories = facilityInventories.filter(
-        (inventory) => inventory.facilityId === transientState.facilityId
-    ).filter(
-        (inventory) => inventory.mineralId === transientState.mineralId
-    )
+  //reduce the facilityInventory amount of the checked mineral by 1 and if there were none of that mineral, create it
+  // Iterate through the inventory so as to get an actual object
+  const matchingFacilityInventories = facilityInventories
+    .filter((inventory) => inventory.facilityId === transientState.facilityId)
+    .filter((inventory) => inventory.mineralId === transientState.mineralId);
 
     if (matchingFacilityInventories.length > 0) {
         const facilityInventory = matchingFacilityInventories[0];
@@ -73,8 +71,8 @@ export const purchaseButtonTransfer = async (clickEvent) => {
         }
         }
     }
-}
-
+  }
+};
 
 document.addEventListener("click", (clickEvent) => {
     if (transientState.mineralId !== 0) {
@@ -83,5 +81,7 @@ document.addEventListener("click", (clickEvent) => {
                 purchaseButtonTransfer()
             }
         }
+
     }
-})
+  }
+});

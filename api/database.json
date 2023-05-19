@@ -2,61 +2,61 @@
   "governors": [
     {
       "id": 1,
-      "name": "Boomer",
+      "name": "Yoda",
       "status": true,
       "colonyId": 1
     },
     {
       "id": 2,
-      "name": "Gruntilda",
+      "name": "Emperor Palpatine",
       "status": true,
       "colonyId": 2
     },
     {
       "id": 3,
-      "name": "Splishsplash",
+      "name": "Obi-Wan Kenobi",
       "status": true,
       "colonyId": 3
     },
     {
       "id": 4,
-      "name": "McFuzzypants",
+      "name": "Anakin Skywalker",
       "status": true,
       "colonyId": 4
     },
     {
       "id": 5,
-      "name": "Quackenstein",
+      "name": "Han Solo",
       "status": true,
       "colonyId": 5
     },
     {
       "id": 6,
-      "name": "Bumblebuns",
+      "name": "Chewbacca",
       "status": true,
       "colonyId": 6
     },
     {
       "id": 7,
-      "name": "Wobblekins",
+      "name": "Mace Windu",
       "status": true,
       "colonyId": 7
     },
     {
       "id": 8,
-      "name": "Snickerdoodle",
+      "name": "Count Dooku",
       "status": true,
       "colonyId": 8
     },
     {
       "id": 9,
-      "name": "Noodlewhip",
+      "name": "Lea Organa",
       "status": true,
       "colonyId": 9
     },
     {
       "id": 10,
-      "name": "Squishyface",
+      "name": "Jar Jar Binks",
       "status": true,
       "colonyId": 10
     }
@@ -64,105 +64,105 @@
   "facilities": [
     {
       "id": 1,
-      "location": "Silent Cartographer Facility",
+      "location": "Star Killer Base",
       "status": true
     },
     {
       "id": 2,
-      "location": "Infinity Operations Center",
+      "location": "Imperial Base",
       "status": true
     },
     {
       "id": 3,
-      "location": "High Charity Research Lab",
+      "location": "Yavin Rebel Base",
       "status": true
     },
     {
       "id": 4,
-      "location": "Delta Halo Control Room",
+      "location": "Death Star",
       "status": true
     },
     {
       "id": 5,
-      "location": "UNSC Pillar of Autumn Hangar",
+      "location": "Endor Shield Facility",
       "status": true
     },
     {
       "id": 6,
-      "location": "Requiem Forerunner Structure",
+      "location": "Coruscant Jedi Temple",
       "status": true
     },
     {
       "id": 7,
-      "location": "Installation 04 Energy Center",
+      "location": "Bespin Cloud City",
       "status": true
     },
     {
       "id": 8,
-      "location": "New Mombasa Data Center",
+      "location": "Mos Eisley",
       "status": true
     },
     {
       "id": 9,
-      "location": "Spartan Training Facility",
+      "location": "Spice Mines of Kessel",
       "status": true
     },
     {
       "id": 10,
-      "location": "Onyx Sentinels Outpost",
+      "location": "Geonosian Droid Factory",
       "status": true
     },
     {
       "id": 11,
-      "location": "Alpha Halo Research Facility",
+      "location": "Kashyyyk Oil Refinery",
       "status": true
     },
     {
       "id": 12,
-      "location": "Harvest Agricultural Dome",
+      "location": "Naboo Theed",
       "status": true
     }
   ],
   "minerals": [
     {
       "id": 1,
-      "name": "Vibranite"
+      "name": "Kyber"
     },
     {
       "id": 2,
-      "name": "Chronoton"
+      "name": "Vonium"
     },
     {
       "id": 3,
-      "name": "Exonium"
+      "name": "Mandalorian Iron"
     },
     {
       "id": 4,
-      "name": "Neptorium"
+      "name": "Corusca"
     },
     {
       "id": 5,
-      "name": "Aetherium"
+      "name": "Solari"
     },
     {
       "id": 6,
-      "name": "Quantumite"
+      "name": "Durasteel"
     },
     {
       "id": 7,
-      "name": "Plasmaite"
+      "name": "Quadranium Steel"
     },
     {
       "id": 8,
-      "name": "Nanite"
+      "name": "Cerulean"
     },
     {
       "id": 9,
-      "name": "Phaserite"
+      "name": "Phrik"
     },
     {
       "id": 10,
-      "name": "Xenocrystal"
+      "name": "Salt"
     }
   ],
   "colonies": [
@@ -369,6 +369,18 @@
       "mineralId": 6,
       "amount": 5,
       "id": 27
+    },
+    {
+      "colonyId": 2,
+      "mineralId": 6,
+      "amount": 1,
+      "id": 28
+    },
+    {
+      "colonyId": 3,
+      "mineralId": 7,
+      "amount": 13,
+      "id": 29
     }
   ],
   "facilityInventory": [
@@ -394,7 +406,7 @@
       "id": 4,
       "facilityId": 2,
       "mineralId": 6,
-      "amount": 45
+      "amount": 44
     },
     {
       "id": 5,
@@ -406,7 +418,7 @@
       "id": 6,
       "facilityId": 3,
       "mineralId": 7,
-      "amount": 83
+      "amount": 70
     },
     {
       "id": 7,

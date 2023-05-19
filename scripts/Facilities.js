@@ -1,5 +1,5 @@
 import { setFacilityChoice, transientState } from "./TransientState.js"
-;
+
 export const GetFacilities = async () => {
   const response = await fetch("http://localhost:8088/facilities");
   const facilities = await response.json();
@@ -17,7 +17,7 @@ export const GetFacilities = async () => {
       }
     )
     .join("");
-  
+
   const dropDown = `<select name="facility">
 <option value="0" name='facility'> Choose a facility...</option>
 ${allFacilities}
@@ -27,8 +27,8 @@ ${allFacilities}
 
 const handleFacilityChoice = (changeEvent) => {
   if (changeEvent.target.name === "facility") {
-      const chosenFacility = changeEvent.target.value
-      setFacilityChoice(parseInt(chosenFacility))
+    const chosenFacility = changeEvent.target.value
+    setFacilityChoice(parseInt(chosenFacility))
   }
 }
 
