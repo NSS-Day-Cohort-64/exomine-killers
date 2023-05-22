@@ -9,7 +9,7 @@
     {
       "id": 2,
       "name": "Emperor Palpatine",
-      "status": false,
+      "status": true,
       "colonyId": 2
     },
     {
@@ -85,7 +85,7 @@
     {
       "id": 5,
       "location": "Endor Shield Facility",
-      "status": false
+      "status": true
     },
     {
       "id": 6,
@@ -260,7 +260,7 @@
       "id": 9,
       "colonyId": 1,
       "mineralId": 2,
-      "amount": 93
+      "amount": 74
     },
     {
       "id": 10,
@@ -296,19 +296,19 @@
       "id": 15,
       "colonyId": 2,
       "mineralId": 8,
-      "amount": 77
+      "amount": 78
     },
     {
       "id": 16,
       "colonyId": 4,
       "mineralId": 1,
-      "amount": 53
+      "amount": 45
     },
     {
       "id": 17,
       "colonyId": 1,
       "mineralId": 7,
-      "amount": 85
+      "amount": 91
     },
     {
       "id": 18,
@@ -361,7 +361,7 @@
     {
       "colonyId": 1,
       "mineralId": 10,
-      "amount": 7,
+      "amount": 14,
       "id": 26
     },
     {
@@ -373,13 +373,13 @@
     {
       "colonyId": 2,
       "mineralId": 6,
-      "amount": 3,
+      "amount": 4,
       "id": 28
     },
     {
       "colonyId": 3,
       "mineralId": 7,
-      "amount": 13,
+      "amount": 15,
       "id": 29
     },
     {
@@ -413,33 +413,33 @@
       "id": 34
     },
     {
-      "colonyId": 4,
-      "mineralId": 8,
-      "amount": 2,
+      "colonyId": 2,
+      "mineralId": 10,
+      "amount": 4,
       "id": 35
     },
     {
-      "colonyId": 4,
+      "colonyId": 2,
       "mineralId": 9,
-      "amount": 15,
+      "amount": 1,
       "id": 36
     },
     {
-      "colonyId": 4,
-      "mineralId": 7,
-      "amount": 2,
+      "colonyId": 1,
+      "mineralId": 6,
+      "amount": 1,
       "id": 37
     },
     {
-      "colonyId": 8,
-      "mineralId": 8,
-      "amount": 35,
+      "colonyId": 4,
+      "mineralId": 4,
+      "amount": 2,
       "id": 38
     },
     {
-      "colonyId": 8,
-      "mineralId": 6,
-      "amount": 18,
+      "colonyId": 6,
+      "mineralId": 8,
+      "amount": 7,
       "id": 39
     }
   ],
@@ -454,7 +454,7 @@
       "id": 2,
       "facilityId": 5,
       "mineralId": 9,
-      "amount": 0
+      "amount": 14
     },
     {
       "id": 3,
@@ -466,7 +466,7 @@
       "id": 4,
       "facilityId": 2,
       "mineralId": 6,
-      "amount": 42
+      "amount": 41
     },
     {
       "id": 5,
@@ -478,13 +478,13 @@
       "id": 6,
       "facilityId": 3,
       "mineralId": 7,
-      "amount": 70
+      "amount": 62
     },
     {
       "id": 7,
       "facilityId": 10,
       "mineralId": 1,
-      "amount": 16
+      "amount": 24
     },
     {
       "id": 8,
@@ -496,13 +496,13 @@
       "id": 9,
       "facilityId": 6,
       "mineralId": 8,
-      "amount": 47
+      "amount": 42
     },
     {
       "id": 10,
       "facilityId": 1,
       "mineralId": 10,
-      "amount": 64
+      "amount": 53
     },
     {
       "id": 11,
@@ -514,7 +514,7 @@
       "id": 12,
       "facilityId": 7,
       "mineralId": 6,
-      "amount": 43
+      "amount": 60
     },
     {
       "id": 13,
@@ -532,13 +532,13 @@
       "id": 15,
       "facilityId": 3,
       "mineralId": 4,
-      "amount": 12
+      "amount": 26
     },
     {
       "id": 16,
       "facilityId": 10,
       "mineralId": 7,
-      "amount": 66
+      "amount": 68
     },
     {
       "id": 17,
@@ -580,7 +580,7 @@
       "id": 23,
       "facilityId": 7,
       "mineralId": 8,
-      "amount": 29
+      "amount": 63
     },
     {
       "id": 24,
